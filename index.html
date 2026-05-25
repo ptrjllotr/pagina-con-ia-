@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- tu CSS externo -->
+    <script src="script.js" defer></script> <!-- tu JS externo -->
+    <style>
+        /* Estilos para el menú desplegable */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+
+        /* Fondo central */
+        .main {
+            min-height: 90vh;
+            background: url('fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: black; /* Cambiado a negro */
+        }
+
+        .titulo {
+            margin-top: 50px;
+            font-size: 48px;
+            font-weight: bold;
+            color: black; /* Título en negro */
+        }
+
+        .descripcion {
+            margin-top: 10px;
+            font-size: 18px;
+            max-width: 600px;
+            color: black; /* Texto en negro */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú desplegable en la esquina superior izquierda -->
+    <div class="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Menú</button>
+            <div class="dropdown-content">
+                <a href="lugares.html">Lugares</a>
+                <a href="comida.html">Comida</a>
+                <a href="mi_propuesta.html">Mi propuesta</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fondo central con título y descripción -->
+    <div class="main">
+        <div class="titulo">BLOG DE HUAJUAPAN DE LEON</div>
+        <div class="descripcion">
+            He creado este blog para compartir mis experiencias, lugares favoritos y propuestas culinarias. 
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        Blog Huajuapan Mágico
+    </footer>
+
+</body>
+</html>

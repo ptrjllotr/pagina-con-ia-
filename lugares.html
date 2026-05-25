@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares de Huajuapan</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("lugares.jpg"); /* fondo correcto */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+
+        /* Menú superior izquierdo */
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #666;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+
+        /* Botón de inicio superior derecho */
+        .btn-inicio {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+
+        .btn-inicio:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contenido */
+        .contenido {
+            padding: 100px 20px 20px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 45px;
+            color: #ffd700;
+        }
+
+        .lugares-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .lugar {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .lugar:hover {
+            transform: scale(1.05);
+        }
+
+        .lugar img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .lugar h2 {
+            color: #ffd700;
+        }
+
+        .btn-como-llegar {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-como-llegar:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- Menú superior izquierdo -->
+    <div class="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Menú</button>
+            <div class="dropdown-content">
+                <a href="lugares.html">Lugares</a>
+                <a href="comida.html">Comida</a>
+                <a href="mi_propuesta.html">Mi propuesta</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón inicio superior derecho -->
+    <a class="btn-inicio" href="index.html">Inicio</a>
+
+    <!-- Contenido principal -->
+    <div class="contenido">
+
+        <h1>Lugares de Huajuapan</h1>
+
+        <div class="lugares-container">
+
+            <!-- Lugares originales -->
+            <div class="lugar">
+                <img src="foto1.jpg" alt="Parque Central">
+                <h2>Parque Central Benito Juárez</h2>
+                <p>Lugar principal de convivencia en Huajuapan, rodeado de comercios y cultura.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Parque+Central+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <div class="lugar">
+                <img src="foto2.jpg" alt="Catedral">
+                <h2>Catedral de Huajuapan</h2>
+                <p>Hermosa iglesia histórica representativa de la ciudad y sus tradiciones.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Catedral+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <div class="lugar">
+                <img src="foto3.jpg" alt="Museo">
+                <h2>Museo Regional</h2>
+                <p>Espacio cultural donde se conserva la historia de la región Mixteca.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Museo+Regional+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <!-- Nuevos lugares -->
+            <div class="lugar">
+                <img src="foto4.jpg" alt="Mirador de Cristal">
+                <h2>Mirador de Cristal</h2>
+                <p>Disfruta de una vista panorámica impresionante de Huajuapan desde este mirador moderno y seguro.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Mirador+de+Cristal+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <div class="lugar">
+                <img src="foto5.jpg" alt="Puente Colgante">
+                <h2>Puente Colgante</h2>
+                <p>Icono turístico de la ciudad, ideal para caminar y tomar fotos espectaculares del río Mixteco.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Puente+Colgante+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <div class="lugar">
+                <img src="foto6.jpg" alt="Paseo de las Campanas">
+                <h2>Paseo de las Campanas</h2>
+                <p>Paseo peatonal donde se realizan eventos culturales y recreativos, rodeado de arquitectura histórica.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Paseo+de+las+Campanas+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+            <div class="lugar">
+                <img src="foto7.jpg" alt="Cerro de las Minas">
+                <h2>Cerro de las Minas</h2>
+                <p>Lugar ideal para el senderismo y disfrutar de la naturaleza y vistas panorámicas de la región Mixteca.</p>
+                <a class="btn-como-llegar" href="https://www.google.com/maps?q=Cerro+de+las+Minas+Huajuapan" target="_blank">Cómo llegar</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
